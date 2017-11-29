@@ -1,0 +1,37 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>jQuery Example</title>
+</head>
+
+<body>
+    <p><input value="stranger"></p>
+    <p>Hello, <span id='placeholder'>stranger</span>!</p>
+    <p>
+        <button id="bob">Bob</button>
+        <button id="jan">Jan</button>
+    </p>
+
+    <script src="/libs/jquery.js"></script>
+    <script>
+        const input = $('input');
+        const placeholder = $('#placeholder');
+
+        input.on('keyup', function(e) {
+            placeholder.html(input.val());
+        });
+
+        $('#bob').on('click', function() {
+            input.val('Bob');
+            placeholder.html('Bob');
+        });
+        
+        $('#jan').on('click', function() {
+            input.val('Jan');
+            placeholder.html('Jan');
+        });
+    </script>
+</body>
+</html>

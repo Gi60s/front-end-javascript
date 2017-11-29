@@ -1,0 +1,29 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Vue Example</title>
+</head>
+
+<body>
+    <div id="app">
+        <p><input v-model="name"></p>
+        <p>Hello, {{name}}!</p>
+        <p>
+            <button @click="name='Bob'">Bob</button>
+            <button @click="name='Jan'">Jan</button>
+        </p>
+    </div>
+
+    <script src="/libs/vue.js"></script>
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data: {
+                name: 'stranger'
+            }
+        });
+    </script>
+</body>
+</html>
